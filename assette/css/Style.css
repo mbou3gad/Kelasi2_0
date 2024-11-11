@@ -1,0 +1,264 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #ff8c00;
+    --accent-color: #e74c3c;
+}
+
+.modal-xl {
+max-width: 95% !important;
+margin: 1.75rem auto;
+}
+
+.modal-lg {
+max-width: 90% !important;
+margin: 1.75rem auto;
+}
+
+@media (max-width: 768px) {
+.modal-dialog {
+max-width: 95% !important;
+margin: 1.75rem auto;
+}
+
+.modal-body {
+padding: 1.5rem;
+font-size: 1.1rem;
+}
+
+.accordion-body {
+padding: 1.25rem;
+}
+
+.table td, .table th {
+padding: 1rem 0.75rem;
+}
+
+.modal .btn {
+padding: 0.75rem 1.25rem;
+font-size: 1.1rem;
+}
+}
+
+.protected-link::after {
+    content: '\f023';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-left: 5px;
+    font-size: 0.8em;
+}
+
+.protected-link:hover::after {
+    color: var(--accent-color);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: white !important;
+    margin: 0 10px;
+}
+
+.dropdown-menu {
+    background-color: var(--primary-color);
+    border: none;
+}
+
+.dropdown-item {
+    color: white !important;
+    padding: 0.5rem 1rem;
+}
+
+.dropdown-item:hover {
+    background-color: var(--secondary-color);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    background: none;
+    height: 500px;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-slideshow .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-slideshow .slide.active {
+    opacity: 1;
+}
+
+.slide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+.auth-form {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.course-card {
+    border: none;
+    transition: transform 0.3s;
+    margin-bottom: 20px;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+.pricing-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--accent-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.support-form {
+    background-color: #f8f9fa;
+    padding: 2rem 0;
+    border-top: 1px solid #dee2e6;
+}
+
+.support-form h5 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.text-primary {
+    color: #ff8c00 !important;
+}
+
+.btn-primary {
+    background-color: #ff8c00 !important;
+    border-color: #ff8c00 !important;
+}
+
+.btn-primary:hover {
+    background-color: #e67e00 !important;
+    border-color: #e67e00 !important;
+}
+
+.text-primary i {
+    color: #ff8c00 !important;
+}
+
+.fa-3x.text-primary {
+    color: #ff8c00 !important;
+}
+
+.phone-number {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.phone-number:hover {
+    background: #e9ecef;
+}
+
+.phone-number .copy-tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.phone-number:hover .copy-tooltip {
+    opacity: 1;
+}
+
+.copy-success {
+    animation: fadeOut 2s forwards;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    70% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.grayscale {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+    opacity: 0.7;
+}
+
+.grayscale:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.partner-tooltip {
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    z-index: 100;
+}
